@@ -102,6 +102,19 @@ svg{display:block;width:100%;height:auto;margin-top:2px}
 .leg li{display:flex;align-items:center;gap:6px}
 .leg i{width:11px;height:11px;border-radius:3px;flex:none}
 
+.horas{list-style:none;margin:0;padding:0}
+.hora{display:flex;align-items:center;gap:9px;padding:7px 0;
+  border-top:1px solid var(--line);font-size:15px}
+.hora:first-child{border-top:0}
+.hq{min-width:26px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink2)}
+.bar2{flex:1;height:7px;background:var(--field);border-radius:4px;overflow:hidden}
+.bar2 i{display:block;height:100%;background:var(--reposo);border-radius:4px}
+.pp{min-width:52px;text-align:right;font-variant-numeric:tabular-nums;font-weight:500}
+.pr{min-width:22px;font-size:12px;color:var(--ink3);text-align:right}
+.hora.min .bar2 i{background:var(--coche)}
+.hora.min .pp{color:var(--coche);font-weight:700}
+.hora.max .bar2 i{background:var(--desc)}
+.hora.max .pp{color:var(--desc);font-weight:700}
 .hist{list-style:none;display:flex;gap:5px;margin:0;padding:0;align-items:flex-end}
 .hist li{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px}
 .hb{width:100%;background:var(--reposo);border-radius:3px 3px 0 0}
@@ -119,7 +132,7 @@ footer{font-size:12px;color:var(--ink3);line-height:1.5;text-align:center;paddin
     <p class="caduco" id="caduco" hidden></p>
   </div>
 
-  <div class="tabs" id="tabs"><button class="tab" data-d="20260908" type="button">martes 8</button></div>
+  <div class="tabs" id="tabs"><button class="tab" data-d="20260908" type="button">martes 8</button><button class="tab" data-d="20260909" type="button">miércoles 9</button></div>
 
   <div class="card">
     <h2>Coche</h2>
@@ -170,35 +183,37 @@ footer{font-size:12px;color:var(--ink3);line-height:1.5;text-align:center;paddin
       <h2>Batería y sol</h2>
       <p class="txt" id="bat_20260908">—</p>
       <svg viewBox="0 0 350 86" role="img" aria-label="Sol previsto frente al consumo estimado de la casa">
-<line class="grid" x1="26" x2="344" y1="24.5" y2="24.5"/>
-<text class="tk" x="22" y="28.0" text-anchor="end">1</text>
-<path class="a-sol" d="M 26.0 64 L 26.0 64.0 L 29.3 64.0 L 32.6 64.0 L 35.9 64.0 L 39.2 64.0 L 42.6 64.0 L 45.9 64.0 L 49.2 64.0 L 52.5 64.0 L 55.8 64.0 L 59.1 64.0 L 62.4 64.0 L 65.8 64.0 L 69.1 64.0 L 72.4 64.0 L 75.7 64.0 L 79.0 64.0 L 82.3 64.0 L 85.6 64.0 L 88.9 64.0 L 92.2 64.0 L 95.6 64.0 L 98.9 64.0 L 102.2 64.0 L 105.5 64.0 L 108.8 64.0 L 112.1 64.0 L 115.4 64.0 L 118.8 64.0 L 122.1 64.0 L 125.4 64.0 L 128.7 64.0 L 132.0 63.9 L 135.3 63.2 L 138.6 62.2 L 141.9 61.2 L 145.2 60.3 L 148.6 60.8 L 151.9 59.9 L 155.2 58.4 L 158.5 56.4 L 161.8 50.5 L 165.1 46.6 L 168.4 42.6 L 171.8 38.3 L 175.1 32.1 L 178.4 28.5 L 181.7 25.5 L 185.0 23.0 L 188.3 20.5 L 191.6 18.5 L 194.9 17.3 L 198.2 17.0 L 201.6 17.4 L 204.9 18.1 L 208.2 18.9 L 211.5 19.7 L 214.8 20.9 L 218.1 21.9 L 221.4 23.1 L 224.8 24.2 L 228.1 25.4 L 231.4 26.6 L 234.7 27.5 L 238.0 28.1 L 241.3 28.7 L 244.6 30.2 L 247.9 32.8 L 251.2 36.4 L 254.6 40.2 L 257.9 43.9 L 261.2 46.9 L 264.5 49.5 L 267.8 51.9 L 271.1 54.2 L 274.4 56.5 L 277.8 58.7 L 281.1 60.5 L 284.4 61.9 L 287.7 62.8 L 291.0 63.4 L 294.3 63.8 L 297.6 64.0 L 300.9 64.0 L 304.2 64.0 L 307.6 64.0 L 310.9 64.0 L 314.2 64.0 L 317.5 64.0 L 320.8 64.0 L 324.1 64.0 L 327.4 64.0 L 330.8 64.0 L 334.1 64.0 L 337.4 64.0 L 340.7 64.0 L 344.0 64 Z"/>
-<rect class="a-exc" x="172.05" y="38.3" width="2.71" height="0.8"/>
-<rect class="a-exc" x="175.36" y="32.1" width="2.71" height="7.0"/>
-<rect class="a-exc" x="178.68" y="28.5" width="2.71" height="10.7"/>
-<rect class="a-exc" x="181.99" y="25.5" width="2.71" height="13.6"/>
-<rect class="a-exc" x="185.30" y="23.0" width="2.71" height="16.2"/>
-<rect class="a-exc" x="188.61" y="20.5" width="2.71" height="18.6"/>
-<rect class="a-exc" x="191.93" y="18.5" width="2.71" height="20.6"/>
-<rect class="a-exc" x="195.24" y="17.3" width="2.71" height="21.8"/>
-<rect class="a-exc" x="198.55" y="17.0" width="2.71" height="22.1"/>
-<rect class="a-exc" x="201.86" y="17.4" width="2.71" height="21.7"/>
-<rect class="a-exc" x="205.18" y="18.1" width="2.71" height="21.0"/>
-<rect class="a-exc" x="208.49" y="18.9" width="2.71" height="20.3"/>
-<rect class="a-exc" x="211.80" y="19.7" width="2.71" height="19.4"/>
-<rect class="a-exc" x="215.11" y="20.9" width="2.71" height="18.2"/>
-<rect class="a-exc" x="218.43" y="21.9" width="2.71" height="17.2"/>
-<rect class="a-exc" x="221.74" y="23.1" width="2.71" height="16.0"/>
-<rect class="a-exc" x="225.05" y="24.2" width="2.71" height="14.9"/>
-<rect class="a-exc" x="228.36" y="25.4" width="2.71" height="13.7"/>
-<rect class="a-exc" x="231.68" y="26.6" width="2.71" height="12.6"/>
-<rect class="a-exc" x="234.99" y="27.5" width="2.71" height="11.6"/>
-<rect class="a-exc" x="238.30" y="28.1" width="2.71" height="11.1"/>
-<rect class="a-exc" x="241.61" y="28.7" width="2.71" height="10.4"/>
-<rect class="a-exc" x="244.93" y="30.2" width="2.71" height="8.9"/>
-<rect class="a-exc" x="248.24" y="32.8" width="2.71" height="6.3"/>
-<rect class="a-exc" x="251.55" y="36.4" width="2.71" height="2.8"/>
-<path class="l-casa" d="M 26.0 39.1 L 29.3 39.1 L 32.6 39.1 L 35.9 39.1 L 39.2 39.1 L 42.6 39.1 L 45.9 39.1 L 49.2 39.1 L 52.5 39.1 L 55.8 39.1 L 59.1 39.1 L 62.4 39.1 L 65.8 37.9 L 69.1 36.4 L 72.4 35.2 L 75.7 34.4 L 79.0 33.6 L 82.3 32.8 L 85.6 32.8 L 88.9 34.0 L 92.2 35.2 L 95.6 36.0 L 98.9 37.5 L 102.2 39.1 L 105.5 39.1 L 108.8 39.1 L 112.1 39.1 L 115.4 39.1 L 118.8 39.1 L 122.1 39.1 L 125.4 39.1 L 128.7 39.1 L 132.0 39.1 L 135.3 39.1 L 138.6 39.1 L 141.9 39.1 L 145.2 39.1 L 148.6 39.1 L 151.9 39.1 L 155.2 39.1 L 158.5 39.1 L 161.8 39.1 L 165.1 39.1 L 168.4 39.1 L 171.8 39.1 L 175.1 39.1 L 178.4 39.1 L 181.7 39.1 L 185.0 39.1 L 188.3 39.1 L 191.6 39.1 L 194.9 39.1 L 198.2 39.1 L 201.6 39.1 L 204.9 39.1 L 208.2 39.1 L 211.5 39.1 L 214.8 39.1 L 218.1 39.1 L 221.4 39.1 L 224.8 39.1 L 228.1 39.1 L 231.4 39.1 L 234.7 39.1 L 238.0 39.1 L 241.3 39.1 L 244.6 39.1 L 247.9 39.1 L 251.2 39.1 L 254.6 39.1 L 257.9 39.1 L 261.2 39.1 L 264.5 39.1 L 267.8 39.1 L 271.1 39.1 L 274.4 39.1 L 277.8 39.1 L 281.1 39.1 L 284.4 39.1 L 287.7 39.1 L 291.0 39.1 L 294.3 39.1 L 297.6 39.1 L 300.9 39.1 L 304.2 39.1 L 307.6 39.1 L 310.9 39.1 L 314.2 39.1 L 317.5 39.1 L 320.8 39.1 L 324.1 39.1 L 327.4 39.1 L 330.8 39.1 L 334.1 39.1 L 337.4 39.1 L 340.7 39.1"/>
+<line class="grid" x1="26" x2="344" y1="28.3" y2="28.3"/>
+<text class="tk" x="22" y="31.8" text-anchor="end">1</text>
+<path class="a-sol" d="M 26.0 64 L 26.0 64.0 L 29.3 64.0 L 32.6 64.0 L 35.9 64.0 L 39.2 64.0 L 42.6 64.0 L 45.9 64.0 L 49.2 64.0 L 52.5 64.0 L 55.8 64.0 L 59.1 64.0 L 62.4 64.0 L 65.8 64.0 L 69.1 64.0 L 72.4 64.0 L 75.7 64.0 L 79.0 64.0 L 82.3 64.0 L 85.6 64.0 L 88.9 64.0 L 92.2 64.0 L 95.6 64.0 L 98.9 64.0 L 102.2 64.0 L 105.5 64.0 L 108.8 64.0 L 112.1 64.0 L 115.4 64.0 L 118.8 64.0 L 122.1 64.0 L 125.4 64.0 L 128.7 64.0 L 132.0 63.9 L 135.3 62.9 L 138.6 61.6 L 141.9 60.3 L 145.2 59.0 L 148.6 59.0 L 151.9 57.5 L 155.2 55.6 L 158.5 53.2 L 161.8 47.7 L 165.1 45.4 L 168.4 42.9 L 171.8 39.9 L 175.1 32.9 L 178.4 30.9 L 181.7 28.9 L 185.0 27.2 L 188.3 23.5 L 191.6 22.0 L 194.9 20.7 L 198.2 19.7 L 201.6 18.3 L 204.9 18.1 L 208.2 18.5 L 211.5 19.4 L 214.8 19.2 L 218.1 19.4 L 221.4 19.9 L 224.8 20.6 L 228.1 17.0 L 231.4 19.5 L 234.7 23.0 L 238.0 27.5 L 241.3 22.9 L 244.6 25.6 L 247.9 29.1 L 251.2 33.1 L 254.6 34.6 L 257.9 37.8 L 261.2 41.6 L 264.5 45.7 L 267.8 51.2 L 271.1 53.5 L 274.4 55.9 L 277.8 58.3 L 281.1 61.7 L 284.4 62.2 L 287.7 62.6 L 291.0 63.0 L 294.3 63.2 L 297.6 64.0 L 300.9 64.0 L 304.2 64.0 L 307.6 64.0 L 310.9 64.0 L 314.2 64.0 L 317.5 64.0 L 320.8 64.0 L 324.1 64.0 L 327.4 64.0 L 330.8 64.0 L 334.1 64.0 L 337.4 64.0 L 340.7 64.0 L 344.0 64 Z"/>
+<rect class="a-exc" x="172.05" y="39.9" width="2.71" height="1.5"/>
+<rect class="a-exc" x="175.36" y="32.9" width="2.71" height="8.6"/>
+<rect class="a-exc" x="178.68" y="30.9" width="2.71" height="10.6"/>
+<rect class="a-exc" x="181.99" y="28.9" width="2.71" height="12.5"/>
+<rect class="a-exc" x="185.30" y="27.2" width="2.71" height="14.3"/>
+<rect class="a-exc" x="188.61" y="23.5" width="2.71" height="18.0"/>
+<rect class="a-exc" x="191.93" y="22.0" width="2.71" height="19.5"/>
+<rect class="a-exc" x="195.24" y="20.7" width="2.71" height="20.8"/>
+<rect class="a-exc" x="198.55" y="19.7" width="2.71" height="21.8"/>
+<rect class="a-exc" x="201.86" y="18.3" width="2.71" height="23.2"/>
+<rect class="a-exc" x="205.18" y="18.1" width="2.71" height="23.4"/>
+<rect class="a-exc" x="208.49" y="18.5" width="2.71" height="23.0"/>
+<rect class="a-exc" x="211.80" y="19.4" width="2.71" height="22.0"/>
+<rect class="a-exc" x="215.11" y="19.2" width="2.71" height="22.3"/>
+<rect class="a-exc" x="218.43" y="19.4" width="2.71" height="22.0"/>
+<rect class="a-exc" x="221.74" y="19.9" width="2.71" height="21.6"/>
+<rect class="a-exc" x="225.05" y="20.6" width="2.71" height="20.9"/>
+<rect class="a-exc" x="228.36" y="17.0" width="2.71" height="24.4"/>
+<rect class="a-exc" x="231.68" y="19.5" width="2.71" height="22.0"/>
+<rect class="a-exc" x="234.99" y="23.0" width="2.71" height="18.5"/>
+<rect class="a-exc" x="238.30" y="27.5" width="2.71" height="13.9"/>
+<rect class="a-exc" x="241.61" y="22.9" width="2.71" height="18.6"/>
+<rect class="a-exc" x="244.93" y="25.6" width="2.71" height="15.9"/>
+<rect class="a-exc" x="248.24" y="29.1" width="2.71" height="12.4"/>
+<rect class="a-exc" x="251.55" y="33.1" width="2.71" height="8.4"/>
+<rect class="a-exc" x="254.86" y="34.6" width="2.71" height="6.9"/>
+<rect class="a-exc" x="258.18" y="37.8" width="2.71" height="3.7"/>
+<path class="l-casa" d="M 26.0 41.5 L 29.3 41.5 L 32.6 41.5 L 35.9 41.5 L 39.2 41.5 L 42.6 41.5 L 45.9 41.5 L 49.2 41.5 L 52.5 41.5 L 55.8 41.5 L 59.1 41.5 L 62.4 41.5 L 65.8 40.4 L 69.1 39.0 L 72.4 37.9 L 75.7 37.2 L 79.0 36.5 L 82.3 35.8 L 85.6 35.8 L 88.9 36.8 L 92.2 37.9 L 95.6 38.6 L 98.9 40.1 L 102.2 41.5 L 105.5 41.5 L 108.8 41.5 L 112.1 41.5 L 115.4 41.5 L 118.8 41.5 L 122.1 41.5 L 125.4 41.5 L 128.7 41.5 L 132.0 41.5 L 135.3 41.5 L 138.6 41.5 L 141.9 41.5 L 145.2 41.5 L 148.6 41.5 L 151.9 41.5 L 155.2 41.5 L 158.5 41.5 L 161.8 41.5 L 165.1 41.5 L 168.4 41.5 L 171.8 41.5 L 175.1 41.5 L 178.4 41.5 L 181.7 41.5 L 185.0 41.5 L 188.3 41.5 L 191.6 41.5 L 194.9 41.5 L 198.2 41.5 L 201.6 41.5 L 204.9 41.5 L 208.2 41.5 L 211.5 41.5 L 214.8 41.5 L 218.1 41.5 L 221.4 41.5 L 224.8 41.5 L 228.1 41.5 L 231.4 41.5 L 234.7 41.5 L 238.0 41.5 L 241.3 41.5 L 244.6 41.5 L 247.9 41.5 L 251.2 41.5 L 254.6 41.5 L 257.9 41.5 L 261.2 41.5 L 264.5 41.5 L 267.8 41.5 L 271.1 41.5 L 274.4 41.5 L 277.8 41.5 L 281.1 41.5 L 284.4 41.5 L 287.7 41.5 L 291.0 41.5 L 294.3 41.5 L 297.6 41.5 L 300.9 41.5 L 304.2 41.5 L 307.6 41.5 L 310.9 41.5 L 314.2 41.5 L 317.5 41.5 L 320.8 41.5 L 324.1 41.5 L 327.4 41.5 L 330.8 41.5 L 334.1 41.5 L 337.4 41.5 L 340.7 41.5"/>
 <line class="ax" x1="26" x2="344" y1="64" y2="64"/>
 <text class="tk" x="22" y="14" text-anchor="end">kW</text>
 <text class="tk" x="26.0" y="82" text-anchor="middle">00h</text>
@@ -426,15 +441,281 @@ footer{font-size:12px;color:var(--ink3);line-height:1.5;text-align:center;paddin
         <li><i style="background:var(--desc)"></i>Batería a la casa</li>
       </ul>
     </div>
+    <div class="card">
+      <h2>Hora a hora · €/kWh</h2>
+      <ul class="horas"><li class="hora"><span class="hq">00</span><span class="bar2"><i style="width:67%"></i></span><span class="pp">0,364</span><span class="pr">P3</span></li><li class="hora"><span class="hq">01</span><span class="bar2"><i style="width:58%"></i></span><span class="pp">0,331</span><span class="pr">P3</span></li><li class="hora"><span class="hq">02</span><span class="bar2"><i style="width:60%"></i></span><span class="pp">0,336</span><span class="pr">P3</span></li><li class="hora"><span class="hq">03</span><span class="bar2"><i style="width:60%"></i></span><span class="pp">0,336</span><span class="pr">P3</span></li><li class="hora"><span class="hq">04</span><span class="bar2"><i style="width:59%"></i></span><span class="pp">0,331</span><span class="pr">P3</span></li><li class="hora"><span class="hq">05</span><span class="bar2"><i style="width:57%"></i></span><span class="pp">0,327</span><span class="pr">P3</span></li><li class="hora"><span class="hq">06</span><span class="bar2"><i style="width:61%"></i></span><span class="pp">0,341</span><span class="pr">P3</span></li><li class="hora"><span class="hq">07</span><span class="bar2"><i style="width:69%"></i></span><span class="pp">0,371</span><span class="pr">P3</span></li><li class="hora"><span class="hq">08</span><span class="bar2"><i style="width:72%"></i></span><span class="pp">0,383</span><span class="pr">P2</span></li><li class="hora"><span class="hq">09</span><span class="bar2"><i style="width:54%"></i></span><span class="pp">0,313</span><span class="pr">P2</span></li><li class="hora"><span class="hq">10</span><span class="bar2"><i style="width:60%"></i></span><span class="pp">0,337</span><span class="pr">P1</span></li><li class="hora"><span class="hq">11</span><span class="bar2"><i style="width:46%"></i></span><span class="pp">0,282</span><span class="pr">P1</span></li><li class="hora"><span class="hq">12</span><span class="bar2"><i style="width:38%"></i></span><span class="pp">0,252</span><span class="pr">P1</span></li><li class="hora"><span class="hq">13</span><span class="bar2"><i style="width:29%"></i></span><span class="pp">0,218</span><span class="pr">P1</span></li><li class="hora"><span class="hq">14</span><span class="bar2"><i style="width:13%"></i></span><span class="pp">0,156</span><span class="pr">P2</span></li><li class="hora min"><span class="hq">15</span><span class="bar2"><i style="width:8%"></i></span><span class="pp">0,137</span><span class="pr">P2</span></li><li class="hora"><span class="hq">16</span><span class="bar2"><i style="width:12%"></i></span><span class="pp">0,154</span><span class="pr">P2</span></li><li class="hora"><span class="hq">17</span><span class="bar2"><i style="width:29%"></i></span><span class="pp">0,217</span><span class="pr">P2</span></li><li class="hora"><span class="hq">18</span><span class="bar2"><i style="width:63%"></i></span><span class="pp">0,347</span><span class="pr">P1</span></li><li class="hora"><span class="hq">19</span><span class="bar2"><i style="width:87%"></i></span><span class="pp">0,439</span><span class="pr">P1</span></li><li class="hora"><span class="hq">20</span><span class="bar2"><i style="width:95%"></i></span><span class="pp">0,470</span><span class="pr">P1</span></li><li class="hora max"><span class="hq">21</span><span class="bar2"><i style="width:100%"></i></span><span class="pp">0,490</span><span class="pr">P1</span></li><li class="hora"><span class="hq">22</span><span class="bar2"><i style="width:71%"></i></span><span class="pp">0,381</span><span class="pr">P2</span></li><li class="hora"><span class="hq">23</span><span class="bar2"><i style="width:64%"></i></span><span class="pp">0,353</span><span class="pr">P2</span></li></ul>
+    </div>
+  </div>
+
+  <div class="dia" data-d="20260909" hidden>
+    <div class="card">
+      <h2>Batería y sol</h2>
+      <p class="txt" id="bat_20260909">—</p>
+      <svg viewBox="0 0 350 86" role="img" aria-label="Sol previsto frente al consumo estimado de la casa">
+<line class="grid" x1="26" x2="344" y1="34.2" y2="34.2"/>
+<text class="tk" x="22" y="37.7" text-anchor="end">1</text>
+<path class="a-sol" d="M 26.0 64 L 26.0 64.0 L 29.3 64.0 L 32.6 64.0 L 35.9 64.0 L 39.2 64.0 L 42.6 64.0 L 45.9 64.0 L 49.2 64.0 L 52.5 64.0 L 55.8 64.0 L 59.1 64.0 L 62.4 64.0 L 65.8 64.0 L 69.1 64.0 L 72.4 64.0 L 75.7 64.0 L 79.0 64.0 L 82.3 64.0 L 85.6 64.0 L 88.9 64.0 L 92.2 64.0 L 95.6 64.0 L 98.9 64.0 L 102.2 64.0 L 105.5 64.0 L 108.8 64.0 L 112.1 64.0 L 115.4 64.0 L 118.8 64.0 L 122.1 64.0 L 125.4 64.0 L 128.7 64.0 L 132.0 63.8 L 135.3 63.3 L 138.6 62.6 L 141.9 61.6 L 145.2 60.1 L 148.6 58.1 L 151.9 56.1 L 155.2 54.9 L 158.5 55.0 L 161.8 56.1 L 165.1 57.3 L 168.4 57.9 L 171.8 58.1 L 175.1 58.0 L 178.4 57.8 L 181.7 57.5 L 185.0 57.2 L 188.3 56.6 L 191.6 55.5 L 194.9 53.7 L 198.2 50.9 L 201.6 47.4 L 204.9 43.2 L 208.2 38.0 L 211.5 30.2 L 214.8 22.0 L 218.1 17.0 L 221.4 18.7 L 224.8 28.0 L 228.1 39.1 L 231.4 46.8 L 234.7 48.0 L 238.0 43.6 L 241.3 37.0 L 244.6 32.2 L 247.9 33.4 L 251.2 39.4 L 254.6 46.4 L 257.9 51.1 L 261.2 52.0 L 264.5 50.2 L 267.8 47.8 L 271.1 46.9 L 274.4 48.7 L 277.8 52.0 L 281.1 55.4 L 284.4 58.1 L 287.7 60.0 L 291.0 61.5 L 294.3 62.8 L 297.6 64.0 L 300.9 64.0 L 304.2 64.0 L 307.6 64.0 L 310.9 64.0 L 314.2 64.0 L 317.5 64.0 L 320.8 64.0 L 324.1 64.0 L 327.4 64.0 L 330.8 64.0 L 334.1 64.0 L 337.4 64.0 L 340.7 64.0 L 344.0 64 Z"/>
+<rect class="a-exc" x="205.18" y="43.2" width="2.71" height="2.1"/>
+<rect class="a-exc" x="208.49" y="38.0" width="2.71" height="7.2"/>
+<rect class="a-exc" x="211.80" y="30.2" width="2.71" height="15.0"/>
+<rect class="a-exc" x="215.11" y="22.0" width="2.71" height="23.2"/>
+<rect class="a-exc" x="218.43" y="17.0" width="2.71" height="28.2"/>
+<rect class="a-exc" x="221.74" y="18.7" width="2.71" height="26.5"/>
+<rect class="a-exc" x="225.05" y="28.0" width="2.71" height="17.3"/>
+<rect class="a-exc" x="228.36" y="39.1" width="2.71" height="6.1"/>
+<rect class="a-exc" x="238.30" y="43.6" width="2.71" height="1.6"/>
+<rect class="a-exc" x="241.61" y="37.0" width="2.71" height="8.3"/>
+<rect class="a-exc" x="244.93" y="32.2" width="2.71" height="13.0"/>
+<rect class="a-exc" x="248.24" y="33.4" width="2.71" height="11.8"/>
+<rect class="a-exc" x="251.55" y="39.4" width="2.71" height="5.8"/>
+<path class="l-casa" d="M 26.0 45.2 L 29.3 45.2 L 32.6 45.2 L 35.9 45.2 L 39.2 45.2 L 42.6 45.2 L 45.9 45.2 L 49.2 45.2 L 52.5 45.2 L 55.8 45.2 L 59.1 45.2 L 62.4 45.2 L 65.8 44.3 L 69.1 43.1 L 72.4 42.2 L 75.7 41.6 L 79.0 41.0 L 82.3 40.4 L 85.6 40.4 L 88.9 41.3 L 92.2 42.2 L 95.6 42.8 L 98.9 44.0 L 102.2 45.2 L 105.5 45.2 L 108.8 45.2 L 112.1 45.2 L 115.4 45.2 L 118.8 45.2 L 122.1 45.2 L 125.4 45.2 L 128.7 45.2 L 132.0 45.2 L 135.3 45.2 L 138.6 45.2 L 141.9 45.2 L 145.2 45.2 L 148.6 45.2 L 151.9 45.2 L 155.2 45.2 L 158.5 45.2 L 161.8 45.2 L 165.1 45.2 L 168.4 45.2 L 171.8 45.2 L 175.1 45.2 L 178.4 45.2 L 181.7 45.2 L 185.0 45.2 L 188.3 45.2 L 191.6 45.2 L 194.9 45.2 L 198.2 45.2 L 201.6 45.2 L 204.9 45.2 L 208.2 45.2 L 211.5 45.2 L 214.8 45.2 L 218.1 45.2 L 221.4 45.2 L 224.8 45.2 L 228.1 45.2 L 231.4 45.2 L 234.7 45.2 L 238.0 45.2 L 241.3 45.2 L 244.6 45.2 L 247.9 45.2 L 251.2 45.2 L 254.6 45.2 L 257.9 45.2 L 261.2 45.2 L 264.5 45.2 L 267.8 45.2 L 271.1 45.2 L 274.4 45.2 L 277.8 45.2 L 281.1 45.2 L 284.4 45.2 L 287.7 45.2 L 291.0 45.2 L 294.3 45.2 L 297.6 45.2 L 300.9 45.2 L 304.2 45.2 L 307.6 45.2 L 310.9 45.2 L 314.2 45.2 L 317.5 45.2 L 320.8 45.2 L 324.1 45.2 L 327.4 45.2 L 330.8 45.2 L 334.1 45.2 L 337.4 45.2 L 340.7 45.2"/>
+<line class="ax" x1="26" x2="344" y1="64" y2="64"/>
+<text class="tk" x="22" y="14" text-anchor="end">kW</text>
+<text class="tk" x="26.0" y="82" text-anchor="middle">00h</text>
+<text class="tk" x="105.5" y="82" text-anchor="middle">06h</text>
+<text class="tk" x="185.0" y="82" text-anchor="middle">12h</text>
+<text class="tk" x="264.5" y="82" text-anchor="middle">18h</text>
+</svg>
+      <ul class="leg">
+        <li><i style="background:var(--desc);opacity:.45"></i>Sol</li>
+        <li><i style="background:var(--ink2)"></i>Casa</li>
+        <li><i style="background:var(--coche)"></i>Excedente</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Precio de la luz · €/kWh</h2>
+      <svg viewBox="0 0 350 150" role="img" aria-label="Precio de la luz por tramos de 15 minutos con el plan del dia">
+<line class="grid" x1="26" x2="344" y1="95.3" y2="95.3"/>
+<text class="tk" x="22" y="98.8" text-anchor="end">0,1</text>
+<line class="grid" x1="26" x2="344" y1="78.7" y2="78.7"/>
+<text class="tk" x="22" y="82.2" text-anchor="end">0,2</text>
+<line class="grid" x1="26" x2="344" y1="62.0" y2="62.0"/>
+<text class="tk" x="22" y="65.5" text-anchor="end">0,3</text>
+<line class="grid" x1="26" x2="344" y1="45.3" y2="45.3"/>
+<text class="tk" x="22" y="48.8" text-anchor="end">0,4</text>
+<line class="grid" x1="26" x2="344" y1="28.7" y2="28.7"/>
+<text class="tk" x="22" y="32.2" text-anchor="end">0,5</text>
+<line class="grid" x1="26" x2="344" y1="12.0" y2="12.0"/>
+<text class="tk" x="22" y="15.5" text-anchor="end">0,6</text>
+<rect class="bar" id="b0_20260909" x="26.30" y="60.8" width="2.71" height="51.2"/>
+<rect class="bnd" id="n0_20260909" x="26.30" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b1_20260909" x="29.61" y="62.0" width="2.71" height="50.0"/>
+<rect class="bnd" id="n1_20260909" x="29.61" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b2_20260909" x="32.92" y="62.5" width="2.71" height="49.5"/>
+<rect class="bnd" id="n2_20260909" x="32.92" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b3_20260909" x="36.24" y="64.2" width="2.71" height="47.8"/>
+<rect class="bnd" id="n3_20260909" x="36.24" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b4_20260909" x="39.55" y="64.3" width="2.71" height="47.7"/>
+<rect class="bnd" id="n4_20260909" x="39.55" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b5_20260909" x="42.86" y="66.8" width="2.71" height="45.2"/>
+<rect class="bnd" id="n5_20260909" x="42.86" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b6_20260909" x="46.17" y="69.4" width="2.71" height="42.6"/>
+<rect class="bnd" id="n6_20260909" x="46.17" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b7_20260909" x="49.49" y="69.7" width="2.71" height="42.3"/>
+<rect class="bnd" id="n7_20260909" x="49.49" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b8_20260909" x="52.80" y="69.8" width="2.71" height="42.2"/>
+<rect class="bnd" id="n8_20260909" x="52.80" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b9_20260909" x="56.11" y="70.2" width="2.71" height="41.8"/>
+<rect class="bnd" id="n9_20260909" x="56.11" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b10_20260909" x="59.42" y="71.0" width="2.71" height="41.0"/>
+<rect class="bnd" id="n10_20260909" x="59.42" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b11_20260909" x="62.74" y="71.9" width="2.71" height="40.1"/>
+<rect class="bnd" id="n11_20260909" x="62.74" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b12_20260909" x="66.05" y="70.2" width="2.71" height="41.8"/>
+<rect class="bnd" id="n12_20260909" x="66.05" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b13_20260909" x="69.36" y="72.0" width="2.71" height="40.0"/>
+<rect class="bnd" id="n13_20260909" x="69.36" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b14_20260909" x="72.67" y="72.0" width="2.71" height="40.0"/>
+<rect class="bnd" id="n14_20260909" x="72.67" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b15_20260909" x="75.99" y="72.2" width="2.71" height="39.8"/>
+<rect class="bnd" id="n15_20260909" x="75.99" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b16_20260909" x="79.30" y="72.2" width="2.71" height="39.8"/>
+<rect class="bnd" id="n16_20260909" x="79.30" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b17_20260909" x="82.61" y="72.2" width="2.71" height="39.8"/>
+<rect class="bnd" id="n17_20260909" x="82.61" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b18_20260909" x="85.92" y="72.3" width="2.71" height="39.7"/>
+<rect class="bnd" id="n18_20260909" x="85.92" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b19_20260909" x="89.24" y="72.0" width="2.71" height="40.0"/>
+<rect class="bnd" id="n19_20260909" x="89.24" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b20_20260909" x="92.55" y="72.3" width="2.71" height="39.7"/>
+<rect class="bnd" id="n20_20260909" x="92.55" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b21_20260909" x="95.86" y="71.7" width="2.71" height="40.3"/>
+<rect class="bnd" id="n21_20260909" x="95.86" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b22_20260909" x="99.17" y="70.4" width="2.71" height="41.6"/>
+<rect class="bnd" id="n22_20260909" x="99.17" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b23_20260909" x="102.49" y="69.3" width="2.71" height="42.7"/>
+<rect class="bnd" id="n23_20260909" x="102.49" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b24_20260909" x="105.80" y="66.6" width="2.71" height="45.4"/>
+<rect class="bnd" id="n24_20260909" x="105.80" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b25_20260909" x="109.11" y="61.3" width="2.71" height="50.7"/>
+<rect class="bnd" id="n25_20260909" x="109.11" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b26_20260909" x="112.42" y="60.4" width="2.71" height="51.6"/>
+<rect class="bnd" id="n26_20260909" x="112.42" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b27_20260909" x="115.74" y="59.4" width="2.71" height="52.6"/>
+<rect class="bnd" id="n27_20260909" x="115.74" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b28_20260909" x="119.05" y="56.7" width="2.71" height="55.3"/>
+<rect class="bnd" id="n28_20260909" x="119.05" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b29_20260909" x="122.36" y="56.0" width="2.71" height="56.0"/>
+<rect class="bnd" id="n29_20260909" x="122.36" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b30_20260909" x="125.67" y="55.0" width="2.71" height="57.0"/>
+<rect class="bnd" id="n30_20260909" x="125.67" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b31_20260909" x="128.99" y="54.9" width="2.71" height="57.1"/>
+<rect class="bnd" id="n31_20260909" x="128.99" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b32_20260909" x="132.30" y="51.8" width="2.71" height="60.2"/>
+<rect class="bnd" id="n32_20260909" x="132.30" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b33_20260909" x="135.61" y="52.5" width="2.71" height="59.5"/>
+<rect class="bnd" id="n33_20260909" x="135.61" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b34_20260909" x="138.93" y="53.6" width="2.71" height="58.4"/>
+<rect class="bnd" id="n34_20260909" x="138.93" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b35_20260909" x="142.24" y="59.9" width="2.71" height="52.1"/>
+<rect class="bnd" id="n35_20260909" x="142.24" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b36_20260909" x="145.55" y="56.3" width="2.71" height="55.7"/>
+<rect class="bnd" id="n36_20260909" x="145.55" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b37_20260909" x="148.86" y="62.9" width="2.71" height="49.1"/>
+<rect class="bnd" id="n37_20260909" x="148.86" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b38_20260909" x="152.18" y="69.1" width="2.71" height="42.9"/>
+<rect class="bnd" id="n38_20260909" x="152.18" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b39_20260909" x="155.49" y="78.0" width="2.71" height="34.0"/>
+<rect class="bnd" id="n39_20260909" x="155.49" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b40_20260909" x="158.80" y="65.5" width="2.71" height="46.5"/>
+<rect class="bnd" id="n40_20260909" x="158.80" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b41_20260909" x="162.11" y="76.0" width="2.71" height="36.0"/>
+<rect class="bnd" id="n41_20260909" x="162.11" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b42_20260909" x="165.43" y="83.7" width="2.71" height="28.3"/>
+<rect class="bnd" id="n42_20260909" x="165.43" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b43_20260909" x="168.74" y="85.3" width="2.71" height="26.7"/>
+<rect class="bnd" id="n43_20260909" x="168.74" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b44_20260909" x="172.05" y="85.2" width="2.71" height="26.8"/>
+<rect class="bnd" id="n44_20260909" x="172.05" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b45_20260909" x="175.36" y="85.4" width="2.71" height="26.6"/>
+<rect class="bnd" id="n45_20260909" x="175.36" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b46_20260909" x="178.68" y="85.4" width="2.71" height="26.6"/>
+<rect class="bnd" id="n46_20260909" x="178.68" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b47_20260909" x="181.99" y="85.4" width="2.71" height="26.6"/>
+<rect class="bnd" id="n47_20260909" x="181.99" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b48_20260909" x="185.30" y="85.1" width="2.71" height="26.9"/>
+<rect class="bnd" id="n48_20260909" x="185.30" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b49_20260909" x="188.61" y="85.1" width="2.71" height="26.9"/>
+<rect class="bnd" id="n49_20260909" x="188.61" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b50_20260909" x="191.93" y="85.1" width="2.71" height="26.9"/>
+<rect class="bnd" id="n50_20260909" x="191.93" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b51_20260909" x="195.24" y="85.1" width="2.71" height="26.9"/>
+<rect class="bnd" id="n51_20260909" x="195.24" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b52_20260909" x="198.55" y="85.2" width="2.71" height="26.8"/>
+<rect class="bnd" id="n52_20260909" x="198.55" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b53_20260909" x="201.86" y="85.2" width="2.71" height="26.8"/>
+<rect class="bnd" id="n53_20260909" x="201.86" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b54_20260909" x="205.18" y="85.2" width="2.71" height="26.8"/>
+<rect class="bnd" id="n54_20260909" x="205.18" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b55_20260909" x="208.49" y="85.2" width="2.71" height="26.8"/>
+<rect class="bnd" id="n55_20260909" x="208.49" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b56_20260909" x="211.80" y="99.7" width="2.71" height="12.3"/>
+<rect class="bnd" id="n56_20260909" x="211.80" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b57_20260909" x="215.11" y="99.7" width="2.71" height="12.3"/>
+<rect class="bnd" id="n57_20260909" x="215.11" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b58_20260909" x="218.43" y="99.7" width="2.71" height="12.3"/>
+<rect class="bnd" id="n58_20260909" x="218.43" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b59_20260909" x="221.74" y="99.7" width="2.71" height="12.3"/>
+<rect class="bnd" id="n59_20260909" x="221.74" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b60_20260909" x="225.05" y="99.6" width="2.71" height="12.4"/>
+<rect class="bnd" id="n60_20260909" x="225.05" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b61_20260909" x="228.36" y="99.6" width="2.71" height="12.4"/>
+<rect class="bnd" id="n61_20260909" x="228.36" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b62_20260909" x="231.68" y="99.6" width="2.71" height="12.4"/>
+<rect class="bnd" id="n62_20260909" x="231.68" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b63_20260909" x="234.99" y="99.6" width="2.71" height="12.4"/>
+<rect class="bnd" id="n63_20260909" x="234.99" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b64_20260909" x="238.30" y="99.5" width="2.71" height="12.5"/>
+<rect class="bnd" id="n64_20260909" x="238.30" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b65_20260909" x="241.61" y="99.5" width="2.71" height="12.5"/>
+<rect class="bnd" id="n65_20260909" x="241.61" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b66_20260909" x="244.93" y="99.5" width="2.71" height="12.5"/>
+<rect class="bnd" id="n66_20260909" x="244.93" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b67_20260909" x="248.24" y="99.5" width="2.71" height="12.5"/>
+<rect class="bnd" id="n67_20260909" x="248.24" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b68_20260909" x="251.55" y="99.6" width="2.71" height="12.4"/>
+<rect class="bnd" id="n68_20260909" x="251.55" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b69_20260909" x="254.86" y="99.4" width="2.71" height="12.6"/>
+<rect class="bnd" id="n69_20260909" x="254.86" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b70_20260909" x="258.18" y="99.0" width="2.71" height="13.0"/>
+<rect class="bnd" id="n70_20260909" x="258.18" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b71_20260909" x="261.49" y="98.4" width="2.71" height="13.6"/>
+<rect class="bnd" id="n71_20260909" x="261.49" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b72_20260909" x="264.80" y="84.0" width="2.71" height="28.0"/>
+<rect class="bnd" id="n72_20260909" x="264.80" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b73_20260909" x="268.11" y="78.8" width="2.71" height="33.2"/>
+<rect class="bnd" id="n73_20260909" x="268.11" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b74_20260909" x="271.43" y="75.7" width="2.71" height="36.3"/>
+<rect class="bnd" id="n74_20260909" x="271.43" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b75_20260909" x="274.74" y="62.7" width="2.71" height="49.3"/>
+<rect class="bnd" id="n75_20260909" x="274.74" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b76_20260909" x="278.05" y="61.4" width="2.71" height="50.6"/>
+<rect class="bnd" id="n76_20260909" x="278.05" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b77_20260909" x="281.36" y="52.1" width="2.71" height="59.9"/>
+<rect class="bnd" id="n77_20260909" x="281.36" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b78_20260909" x="284.68" y="40.1" width="2.71" height="71.9"/>
+<rect class="bnd" id="n78_20260909" x="284.68" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b79_20260909" x="287.99" y="35.4" width="2.71" height="76.6"/>
+<rect class="bnd" id="n79_20260909" x="287.99" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b80_20260909" x="291.30" y="36.1" width="2.71" height="75.9"/>
+<rect class="bnd" id="n80_20260909" x="291.30" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b81_20260909" x="294.61" y="32.0" width="2.71" height="80.0"/>
+<rect class="bnd" id="n81_20260909" x="294.61" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b82_20260909" x="297.93" y="30.8" width="2.71" height="81.2"/>
+<rect class="bnd" id="n82_20260909" x="297.93" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b83_20260909" x="301.24" y="30.7" width="2.71" height="81.3"/>
+<rect class="bnd" id="n83_20260909" x="301.24" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b84_20260909" x="304.55" y="31.0" width="2.71" height="81.0"/>
+<rect class="bnd" id="n84_20260909" x="304.55" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b85_20260909" x="307.86" y="32.7" width="2.71" height="79.3"/>
+<rect class="bnd" id="n85_20260909" x="307.86" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b86_20260909" x="311.18" y="33.5" width="2.71" height="78.5"/>
+<rect class="bnd" id="n86_20260909" x="311.18" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b87_20260909" x="314.49" y="35.6" width="2.71" height="76.4"/>
+<rect class="bnd" id="n87_20260909" x="314.49" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b88_20260909" x="317.80" y="49.3" width="2.71" height="62.7"/>
+<rect class="bnd" id="n88_20260909" x="317.80" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b89_20260909" x="321.11" y="50.6" width="2.71" height="61.4"/>
+<rect class="bnd" id="n89_20260909" x="321.11" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b90_20260909" x="324.43" y="50.8" width="2.71" height="61.2"/>
+<rect class="bnd" id="n90_20260909" x="324.43" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b91_20260909" x="327.74" y="52.6" width="2.71" height="59.4"/>
+<rect class="bnd" id="n91_20260909" x="327.74" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b92_20260909" x="331.05" y="52.3" width="2.71" height="59.7"/>
+<rect class="bnd" id="n92_20260909" x="331.05" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b93_20260909" x="334.36" y="52.9" width="2.71" height="59.1"/>
+<rect class="bnd" id="n93_20260909" x="334.36" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b94_20260909" x="337.68" y="53.5" width="2.71" height="58.5"/>
+<rect class="bnd" id="n94_20260909" x="337.68" y="118" width="2.71" height="9"/>
+<rect class="bar" id="b95_20260909" x="340.99" y="56.1" width="2.71" height="55.9"/>
+<rect class="bnd" id="n95_20260909" x="340.99" y="118" width="2.71" height="9"/>
+<line class="ax" x1="26" x2="344" y1="112" y2="112"/>
+<text class="tk" x="26.0" y="146" text-anchor="middle">00h</text>
+<text class="tk" x="105.5" y="146" text-anchor="middle">06h</text>
+<text class="tk" x="185.0" y="146" text-anchor="middle">12h</text>
+<text class="tk" x="264.5" y="146" text-anchor="middle">18h</text>
+<text class="tk" x="344.0" y="146" text-anchor="end">24h</text>
+</svg>
+      <ul class="leg">
+        <li><i style="background:var(--coche)"></i>Coche</li>
+        <li><i style="background:var(--carga)"></i>Cargar batería</li>
+        <li><i style="background:var(--desc)"></i>Batería a la casa</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Hora a hora · €/kWh</h2>
+      <ul class="horas"><li class="hora"><span class="hq">00</span><span class="bar2"><i style="width:59%"></i></span><span class="pp">0,298</span><span class="pr">P3</span></li><li class="hora"><span class="hq">01</span><span class="bar2"><i style="width:52%"></i></span><span class="pp">0,267</span><span class="pr">P3</span></li><li class="hora"><span class="hq">02</span><span class="bar2"><i style="width:48%"></i></span><span class="pp">0,248</span><span class="pr">P3</span></li><li class="hora"><span class="hq">03</span><span class="bar2"><i style="width:46%"></i></span><span class="pp">0,242</span><span class="pr">P3</span></li><li class="hora"><span class="hq">04</span><span class="bar2"><i style="width:46%"></i></span><span class="pp">0,239</span><span class="pr">P3</span></li><li class="hora"><span class="hq">05</span><span class="bar2"><i style="width:47%"></i></span><span class="pp">0,246</span><span class="pr">P3</span></li><li class="hora"><span class="hq">06</span><span class="bar2"><i style="width:60%"></i></span><span class="pp">0,300</span><span class="pr">P3</span></li><li class="hora"><span class="hq">07</span><span class="bar2"><i style="width:68%"></i></span><span class="pp">0,338</span><span class="pr">P3</span></li><li class="hora"><span class="hq">08</span><span class="bar2"><i style="width:70%"></i></span><span class="pp">0,345</span><span class="pr">P2</span></li><li class="hora"><span class="hq">09</span><span class="bar2"><i style="width:53%"></i></span><span class="pp">0,273</span><span class="pr">P2</span></li><li class="hora"><span class="hq">10</span><span class="bar2"><i style="width:38%"></i></span><span class="pp">0,206</span><span class="pr">P1</span></li><li class="hora"><span class="hq">11</span><span class="bar2"><i style="width:28%"></i></span><span class="pp">0,160</span><span class="pr">P1</span></li><li class="hora"><span class="hq">12</span><span class="bar2"><i style="width:28%"></i></span><span class="pp">0,162</span><span class="pr">P1</span></li><li class="hora"><span class="hq">13</span><span class="bar2"><i style="width:28%"></i></span><span class="pp">0,161</span><span class="pr">P1</span></li><li class="hora min"><span class="hq">14</span><span class="bar2"><i style="width:8%"></i></span><span class="pp">0,074</span><span class="pr">P2</span></li><li class="hora"><span class="hq">15</span><span class="bar2"><i style="width:8%"></i></span><span class="pp">0,074</span><span class="pr">P2</span></li><li class="hora"><span class="hq">16</span><span class="bar2"><i style="width:8%"></i></span><span class="pp">0,075</span><span class="pr">P2</span></li><li class="hora"><span class="hq">17</span><span class="bar2"><i style="width:9%"></i></span><span class="pp">0,078</span><span class="pr">P2</span></li><li class="hora"><span class="hq">18</span><span class="bar2"><i style="width:41%"></i></span><span class="pp">0,220</span><span class="pr">P1</span></li><li class="hora"><span class="hq">19</span><span class="bar2"><i style="width:80%"></i></span><span class="pp">0,389</span><span class="pr">P1</span></li><li class="hora max"><span class="hq">20</span><span class="bar2"><i style="width:100%"></i></span><span class="pp">0,478</span><span class="pr">P1</span></li><li class="hora"><span class="hq">21</span><span class="bar2"><i style="width:99%"></i></span><span class="pp">0,473</span><span class="pr">P1</span></li><li class="hora"><span class="hq">22</span><span class="bar2"><i style="width:75%"></i></span><span class="pp">0,367</span><span class="pr">P2</span></li><li class="hora"><span class="hq">23</span><span class="bar2"><i style="width:71%"></i></span><span class="pp">0,350</span><span class="pr">P2</span></li></ul>
+    </div>
   </div>
 
 
 
-  <footer id="pie"></footer>
+  <footer>Actualizado el 8 de septiembre a las 17:52 · Precios de REE, firmes desde su publicación.
+  Sol de Open-Meteo ajustado con tu producción real.<span id="pie"></span></footer>
 </div>
 
 <script>
-const D = {"dias":[{"fecha":"martes 8 de septiembre","corta":"martes 8","p":[0.374,0.3658,0.361,0.3561,0.3417,0.3323,0.3254,0.3236,0.3341,0.3341,0.3396,0.3341,0.3345,0.34,0.3345,0.3345,0.3324,0.3324,0.3311,0.3292,0.3261,0.3261,0.3255,0.3301,0.3246,0.3446,0.3448,0.3506,0.3574,0.376,0.3774,0.3718,0.4182,0.3965,0.3729,0.3428,0.3714,0.3288,0.2961,0.254,0.3621,0.3468,0.3305,0.3091,0.3021,0.2948,0.2727,0.2606,0.2699,0.2654,0.24,0.232,0.2204,0.2182,0.2177,0.2178,0.1516,0.1548,0.1623,0.1555,0.1317,0.1317,0.1379,0.1481,0.1239,0.1485,0.1636,0.1788,0.1827,0.2162,0.2238,0.2451,0.3113,0.3493,0.3493,0.3795,0.3847,0.424,0.4518,0.4938,0.454,0.4655,0.4815,0.4804,0.5018,0.5018,0.4897,0.4675,0.3985,0.3801,0.3782,0.3652,0.3694,0.3595,0.3542,0.3304],"per":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2],"hueco":[3.89,3.87,3.86,3.86,3.89,3.89,3.88,3.86,3.79,3.76,3.72,3.7,3.64,3.6,3.57,3.55,3.53,3.51,3.51,3.54,3.57,3.59,3.63,3.68,3.77,3.81,3.83,3.84,3.82,3.83,3.85,3.88,3.93,3.95,3.97,4.0,4.03,4.04,4.06,4.08,4.05,4.02,4.01,4.01,3.95,3.91,3.9,3.91,3.85,3.82,3.82,3.84,3.89,3.89,3.9,3.91,3.89,3.87,3.87,3.89,3.88,3.89,3.92,3.97,4.1,4.1,4.11,4.12,4.09,4.05,4.04,4.03,3.97,3.94,3.94,3.96,4.04,4.05,4.05,4.05,4.02,4.01,4.0,4.0,3.96,3.94,3.94,3.95,3.99,3.99,4.0,4.0,3.98,3.97,3.97,3.96],"sol":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.003,0.021,0.046,0.071,0.094,0.081,0.105,0.141,0.193,0.343,0.441,0.543,0.65,0.807,0.9,0.975,1.039,1.102,1.151,1.182,1.189,1.179,1.161,1.143,1.121,1.092,1.065,1.035,1.007,0.978,0.948,0.924,0.91,0.893,0.856,0.79,0.7,0.602,0.51,0.433,0.368,0.307,0.249,0.191,0.134,0.088,0.053,0.031,0.015,0.006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"casa":[0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.66,0.7,0.73,0.75,0.77,0.79,0.79,0.76,0.73,0.71,0.67,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63],"solCoef":1.45,"solNubes":84,"suf":"20260908","iso":"2026-09-08"}],"gps":4.3,"soc1":16,"batKwh":11.2,"batUtil":9.4,"batCargaKw":3.0,"rend":0.87,"ciclo":0.049,"cocheKwh":95,"fijo":0.72,"fuente":"Precio mercado spot"};
+const D = {"dias":[{"horas":[0.3642,0.3307,0.3355,0.3359,0.3313,0.327,0.3412,0.3707,0.3826,0.3126,0.3371,0.2825,0.2518,0.2185,0.156,0.1373,0.1537,0.217,0.3473,0.4386,0.4703,0.4902,0.3805,0.3534],"perh":[3,3,3,3,3,3,3,3,2,2,1,1,1,1,2,2,2,2,1,1,1,1,2,2],"fecha":"martes 8 de septiembre","corta":"martes 8","p":[0.374,0.3658,0.361,0.3561,0.3417,0.3323,0.3254,0.3236,0.3341,0.3341,0.3396,0.3341,0.3345,0.34,0.3345,0.3345,0.3324,0.3324,0.3311,0.3292,0.3261,0.3261,0.3255,0.3301,0.3246,0.3446,0.3448,0.3506,0.3574,0.376,0.3774,0.3718,0.4182,0.3965,0.3729,0.3428,0.3714,0.3288,0.2961,0.254,0.3621,0.3468,0.3305,0.3091,0.3021,0.2948,0.2727,0.2606,0.2699,0.2654,0.24,0.232,0.2204,0.2182,0.2177,0.2178,0.1516,0.1548,0.1623,0.1555,0.1317,0.1317,0.1379,0.1481,0.1239,0.1485,0.1636,0.1788,0.1827,0.2162,0.2238,0.2451,0.3113,0.3493,0.3493,0.3795,0.3847,0.424,0.4518,0.4938,0.454,0.4655,0.4815,0.4804,0.5018,0.5018,0.4897,0.4675,0.3985,0.3801,0.3782,0.3652,0.3694,0.3595,0.3542,0.3304],"per":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2],"hueco":[3.89,3.87,3.86,3.86,3.89,3.89,3.88,3.86,3.79,3.76,3.72,3.7,3.64,3.6,3.57,3.55,3.53,3.51,3.51,3.54,3.57,3.59,3.63,3.68,3.77,3.81,3.83,3.84,3.82,3.83,3.85,3.88,3.93,3.95,3.97,4.0,4.03,4.04,4.06,4.08,4.05,4.02,4.01,4.01,3.95,3.91,3.9,3.91,3.85,3.82,3.82,3.84,3.89,3.89,3.9,3.91,3.89,3.87,3.87,3.89,3.88,3.89,3.92,3.97,4.1,4.1,4.11,4.12,4.09,4.05,4.04,4.03,3.97,3.94,3.94,3.96,4.04,4.05,4.05,4.05,4.02,4.01,4.0,4.0,3.96,3.94,3.94,3.95,3.99,3.99,4.0,4.0,3.98,3.97,3.97,3.96],"sol":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.004,0.03,0.066,0.104,0.14,0.141,0.183,0.235,0.302,0.456,0.52,0.591,0.673,0.87,0.927,0.981,1.029,1.134,1.176,1.211,1.241,1.279,1.284,1.274,1.247,1.253,1.247,1.235,1.214,1.314,1.246,1.147,1.02,1.151,1.075,0.977,0.864,0.824,0.734,0.628,0.513,0.357,0.295,0.228,0.16,0.064,0.049,0.038,0.028,0.023,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"casa":[0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.66,0.7,0.73,0.75,0.77,0.79,0.79,0.76,0.73,0.71,0.67,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63],"solCoef":1.42,"solNubes":86,"suf":"20260908","iso":"2026-09-08"},{"horas":[0.2977,0.2666,0.2477,0.2422,0.239,0.2465,0.3003,0.3382,0.3453,0.2726,0.2063,0.1599,0.1615,0.161,0.0738,0.0745,0.0748,0.0776,0.2202,0.3886,0.4777,0.4729,0.3669,0.3498],"perh":[3,3,3,3,3,3,3,3,2,2,1,1,1,1,2,2,2,2,1,1,1,1,2,2],"fecha":"miércoles 9 de septiembre","corta":"miércoles 9","p":[0.3072,0.2999,0.2967,0.287,0.2863,0.2709,0.2555,0.2539,0.2533,0.2509,0.2462,0.2404,0.2506,0.24,0.2397,0.2386,0.239,0.2388,0.2382,0.2401,0.238,0.2419,0.2498,0.2562,0.2726,0.3039,0.3094,0.3153,0.332,0.336,0.3421,0.3427,0.361,0.3572,0.3503,0.3126,0.3343,0.2946,0.2576,0.2039,0.2789,0.2163,0.1699,0.1601,0.1609,0.1598,0.1594,0.1594,0.1615,0.1615,0.1615,0.1615,0.161,0.161,0.161,0.161,0.0738,0.0738,0.0738,0.0738,0.0745,0.0745,0.0745,0.0745,0.0748,0.0748,0.0749,0.0749,0.0746,0.0757,0.0781,0.0818,0.1682,0.1992,0.2179,0.2956,0.3038,0.3596,0.4314,0.4598,0.4555,0.48,0.4875,0.4877,0.4863,0.476,0.4711,0.4581,0.376,0.3684,0.3669,0.3562,0.358,0.3544,0.351,0.3356],"per":[3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2],"hueco":[3.89,3.87,3.86,3.86,3.89,3.89,3.88,3.86,3.79,3.76,3.72,3.7,3.64,3.6,3.57,3.55,3.53,3.51,3.51,3.54,3.57,3.59,3.63,3.68,3.77,3.81,3.83,3.84,3.82,3.83,3.85,3.88,3.93,3.95,3.97,4.0,4.03,4.04,4.06,4.08,4.05,4.02,4.01,4.01,3.95,3.91,3.9,3.91,3.85,3.82,3.82,3.84,3.89,3.89,3.9,3.91,3.89,3.87,3.87,3.89,3.88,3.89,3.92,3.97,4.1,4.1,4.11,4.12,4.09,4.05,4.04,4.03,3.97,3.94,3.94,3.96,4.04,4.05,4.05,4.05,4.02,4.01,4.0,4.0,3.96,3.94,3.94,3.95,3.99,3.99,4.0,4.0,3.98,3.97,3.97,3.96],"sol":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.006,0.024,0.047,0.08,0.132,0.198,0.265,0.306,0.301,0.265,0.224,0.203,0.197,0.2,0.208,0.218,0.229,0.247,0.284,0.347,0.439,0.558,0.699,0.873,1.134,1.409,1.575,1.52,1.209,0.834,0.576,0.536,0.684,0.907,1.066,1.026,0.824,0.592,0.433,0.401,0.463,0.544,0.573,0.513,0.403,0.29,0.199,0.134,0.084,0.039,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"casa":[0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.66,0.7,0.73,0.75,0.77,0.79,0.79,0.76,0.73,0.71,0.67,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63,0.63],"solCoef":1.74,"solNubes":55,"suf":"20260909","iso":"2026-09-09"}],"gps":4.3,"soc1":16,"batKwh":11.2,"batUtil":9.4,"batCargaKw":3.0,"rend":0.87,"ciclo":0.049,"cocheKwh":95,"fijo":0.72,"fuente":"Precio mercado spot"};
 const E = function(v,n){ return v.toFixed(n===undefined?2:n).replace(".", ","); };
 const HH = function(i){ const m=i*15;
   return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0"); };
@@ -635,8 +916,7 @@ function calcular(){
          t+='Ganas unos <b>'+E(margen*faltaBat)+' €</b>.'; }
   el("bat_"+ACT).innerHTML=t;
 
-  el("pie").textContent="Precios de REE, firmes desde ayer. Sol de Open-Meteo ajustado con "
-    +"tu producción real. Coste fijo del día: "+E(D.fijo)+" €.";
+  el("pie").textContent=" Coste fijo del día: "+E(D.fijo)+" €.";
 }
 
 ["i-act","i-obj","i-amp","i-fin","i-fuera","i-lv","i-lr"].forEach(function(id){
